@@ -3,17 +3,22 @@ def pow(a, b):
     if b == 0:
         return 1
 
+    # Calculate the absolute values of a and b
+    abs_a, abs_b = abs(a), abs(b)
+
     # Initialize the result to 1
     result = 1
 
-    # If b is negative, calculate the reciprocal of a
-    if b < 0:
-        a = 1 / a
-        b = -b
+    # Multiply abs_a to the result abs_b times
+    for _ in range(abs_b):
+        result *= abs_a
 
-    # Multiply a to the result b times
-    for _ in range(b):
-        result *= a
+    # Consider the signs of a and b to get the final result
+    if b < 0:
+        result = 1 / result
+
+    if a < 0 and b % 2 != 0:
+        result = -result
 
     return result
 
