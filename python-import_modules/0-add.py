@@ -12,5 +12,5 @@ add = add_module.add
 result = add(a, b)
 
 # Print the result with string formatting
-print(f"{a} + {b} = {result}")
+print("{} + {} = {}".format(a, b, result))
 
