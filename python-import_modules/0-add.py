@@ -1,12 +1,16 @@
-def add(a, b):
-    return a + b
+import importlib
 
-if __name__ == "__main__":
-    a = 1
-    b = 2
+# Assign values to a and b
+a = 1
+b = 2
 
-    result = add(a, b)
+# Import the add function from add_0.py
+add_module = importlib.import_module('add_0')
+add = add_module.add
 
-    # Display the result using a single print statement
-    print(f"{a} + {b} = {result}")
+# Calculate the result using the imported add function
+result = add(a, b)
+
+# Print the result with string formatting
+print(f"{a} + {b} = {result}")
 
