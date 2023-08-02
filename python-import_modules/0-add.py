@@ -1,16 +1,11 @@
-import importlib
+#!/usr/bin/python3
+if __name__ == "__main__":
+    from add_0 import add
 
-# Assign values to a and b
-a = 1
-b = 2
+    a = 1
+    b = 2
 
-# Import the add function from add_0.py
-add_module = importlib.import_module('add_0')
-add = add_module.add
+    result = add(a, b)
 
-# Calculate the result using the imported add function
-result = add(a, b)
-
-# Print the result with string formatting
-print("{} + {} = {}".format(a, b, result))
+    print("{a} + {b} = {result}".format(a=a, b=b, result=result))
 
